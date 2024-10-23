@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: scroll;
+}
+
+.post-details {
+  max-width: 800px;
+  margin: 70px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.post-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.post-info .author {
+  font-weight: bold;
+}
+
+.post-info .date {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+.comments-section {
+  margin-top: 3rem;
+}
+
+.comments-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.comments-section li {
+  background-color: #fff;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid #ddd;
+}
+
+.comments-section li strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.comments-section li .created-at {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.like-count {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.like-icon {
+  font-size: 1.5rem;
+  color: #ff0000;
+  margin-right: 0.5rem;
+}
+
+.like-number {
+  font-weight: bold;
+  color: #333;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .post-details {
+    max-width: 95%;
+    margin: 10px auto;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .post-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .post-info .author,
+  .post-info .date {
+    margin-bottom: 0.5rem;
+  }
+
+  .like-count {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .like-icon {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* For smaller screens (e.g., mobile) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+  }
+
+  .comments-section li {
+    padding: 1rem;
+  }
+}

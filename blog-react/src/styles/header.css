@@ -1,0 +1,152 @@
+@media (max-width: 768px) {
+  .header {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+  .header-actions {
+  width: 100%;
+  }
+  .header-title {
+  font-size: 1.5rem;
+  }
+  .button {
+  margin-bottom: 1rem;
+  }
+  .search-form {
+  margin-bottom: 1rem;
+  }
+  .search-input {
+  width: 100%;
+  }
+  .search-button {
+  width: 100%;
+  }
+  .user-actions {
+  margin-top: 1rem;
+  }
+  }
+  
+@media (min-width: 769px) {
+  .header {
+  padding: 1.5rem;
+  }
+  .header-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+  .header-title {
+  font-size: 2rem;
+  }
+  .button {
+  margin-right: 1rem;
+  }
+  .btn-create {
+  margin-right: 1rem;
+  }
+  .search-form {
+  margin-right: 1rem;
+  }
+  .search-input {
+  width: 200px;
+  }
+  .search-button {
+  margin-left: 1rem;
+  }
+  .user-actions {
+  display: flex;
+  align-items: center;
+  }
+  .icon-button {
+  margin-right: 1rem;
+  }
+  .logout-button {
+  background-color: #f74c4f;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  }
+  .icon-button-login {
+  background-color: #318ce7;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  }
+  }
+
+
+
+
+.header {
+    background-color: #2ECC71;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header-title {
+    color: #fff;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+.button, .button-create, .search-input, .search-button, .icon-button, .logout-button, .icon-button-login {
+    color: #fff;
+    background-color: #27AE60;
+    padding: 8px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover, .btn-create:hover, .icon-button:hover, .logout-button:hover, .icon-button-login:hover {
+    background-color: #219653;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.search-input {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.search-button {
+    background-color: #27AE60;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #219653;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+}
+
+.logout-button {
+    background-color: #C0392B;
+}
+
+.logout-button:hover {
+    background-color: #96281B;
+}
+  
