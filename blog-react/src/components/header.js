@@ -18,9 +18,6 @@ const Header = () => {
                 <Link to='/' className="button">
                     Посты
                 </Link>
-                <Link to='/create/post' className='button-create'>
-                    Написать пост
-                </Link>
                 <form className="search-form">
                     <input type="text" placeholder="Поиск" className="search-input"></input>
                     <button type="submit" className="search-button">искать</button>

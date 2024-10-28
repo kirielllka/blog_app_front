@@ -4,7 +4,6 @@ import PostDetails from './components/posts/post_detail';
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LoginPage from './pages/login'
 import RegistrationPage from './pages/RegistrationPage';
-import PostCreate from './pages/PostCreate';
 import Profile from './pages/ProfilePage.jsx';
 
 function App() {
@@ -17,7 +16,6 @@ function App() {
         <Route path="posts/:postId" element={<PostDetails />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/sign-in" element={<RegistrationPage />} />
-        <Route path="/create/post" element={<PostCreate />} />
         <Route path="/profile" element={<Profile/>} />
 
       </Routes>
