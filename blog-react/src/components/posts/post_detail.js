@@ -9,6 +9,8 @@ function PostDetails() {
   const { postId } = useParams(); 
   const [comments, setComments] = useState([]);
   const [post, setPost] = useState({});
+  const [error, setError] = useState("");
+    const [content, setContent] = useState("")
 
   useEffect(() => {
     const fetchPostAndComments = async () => {
@@ -47,6 +49,34 @@ function PostDetails() {
 
     fetchPostAndComments();
   }, [postId]);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError(""); // Сброс ошибки перед отправкой
+
+    try {
+      const author = 23
+      const postId = 10
+      const content = 'qqq'
+      const response = await axios.post(
+      `http://localhost:8000/api/v1/posts/${postId}/comments/`,
+        { author, postId, content },
+        {
+          headers: {
+            Authorization: `Token ${localStorage.getItem("token")}`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      setComments((prevComments) => [...prevComments, response.data]);
+      setContent("");
+    } catch (error) {
+      console.error("Ошибка при добавлении комментария:", error);
+      setError("Не удалось добавить комментарий. Пожалуйста, попробуйте еще раз.");
+    }
+  }
+  
 
   return (
     <div>
@@ -91,6 +121,19 @@ function PostDetails() {
       </ul>
       <Link to="/">Back to List</Link>
     </div>
+    <form onSubmit={handleSubmit} className="create-comment">
+        <div className="content-comment">
+        <label>
+            Контент:
+            <textarea
+              value={content}
+              onChange={(e) => setContent(e.target.value)}
+              required
+            />
+          </label>
+        </div>
+        <button type="submit">Добавить комментарий</button>
+    </form>
     </div>
   );
 }
