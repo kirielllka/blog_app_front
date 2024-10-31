@@ -22,12 +22,13 @@ const RegistrationPage = () => {
     }
 
     try {
+      debugger
       const registerResponce = await axios.post(
         "http://localhost:8000/api/auth/users/",
         {
-          email: formData.email,
-          username: formData.name,
-          password: formData.password,
+          'email': formData.email,
+          'username': formData.name,
+          'password': formData.password,
         },
         {
           headers: { "Content-Type": "application/json" },

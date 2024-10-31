@@ -13,7 +13,7 @@ const Header = () => {
 
     return(
         <header className="header">
-            <h1 className="header-title">Посты</h1>
+            <h1 className="header-title">Блог</h1>
             <div className="header-actions">
                 <Link to='/' className="button">
                     Посты

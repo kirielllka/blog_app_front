@@ -34,7 +34,6 @@ function PostDetails() {
 
   return (
     <div>
-      <Header/>
     <div className="post-details">
       <h1>{post.title}</h1>
       <p>{post.content}</p>

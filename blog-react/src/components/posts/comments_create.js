@@ -41,7 +41,7 @@ const Comment = () => {
       try {
         const response = await axios.post(
         `http://localhost:8000/api/v1/posts/${id}/comments/`,
-          { id, content },
+          {'post':id,'content':content },
           {
             headers: {
               Authorization: `Token ${localStorage.getItem("token")}`,
@@ -79,7 +79,7 @@ const Comment = () => {
             </li>
           ))}
         </ul>
-        <form onSubmit={handleSubmit}>
+        <form className="create-comm" onSubmit={handleSubmit}>
           <div>
             <label>
               Текст:
@@ -90,7 +90,7 @@ const Comment = () => {
               />
             </label>
           </div>
-          <button type="submit">Добавить пост</button>
+          <button type="submit">Добавить комментарий</button>
           {error && <p style={{ color: "red" }}>{error}</p>}{" "}
         </form>
       </div>
