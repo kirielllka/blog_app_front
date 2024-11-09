@@ -25,7 +25,7 @@ const Header = () => {
                 <div className="user-actions">
                     {token ? (
                         <>
-                        <Link to='/profile' className="icon-button">
+                        <Link to={`/profile/${localStorage.getItem('userId')}`} className="icon-button">
                         Профиль
                         </Link>
                         <button type="submit" onClick={handleLogout} className="logout-button">Выйти из аккаунт</button>

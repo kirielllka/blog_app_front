@@ -1,0 +1,84 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; /* Light green background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2 {
+    text-align: center;
+    margin-top: 2rem;
+    color: #228B22; /* Forest green */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+  }
+  
+  /* Profile Container Styles */
+  .profile-container {
+    background-color: #f2f2f2; /* Light gray background for the profile */
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-container h1 {
+    margin-bottom: 1rem;
+  }
+  
+  .user-fullname,
+  .user-birth,
+  .user-age {
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  
+  /* Post List Styles */
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem auto;
+    max-width: 800px; /* Adjust the width for your layout */
+  }
+  
+  .post-user-card {
+    background-color: #f2f2f2; /* Light gray background for cards */
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post-title {
+    font-weight: bold;
+    color: #228B22; /* Forest green */
+    margin-bottom: 0.5rem;
+  }
+  
+  .post-content {
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  
+  .post-author {
+    color: #808080; /* Dark gray for author */
+    margin-bottom: 0.5rem;
+  }
+  
+  .post-dates {
+    font-size: 0.9rem;
+    color: #808080; /* Dark gray for dates */
+  }
+  
+  .post-categories {
+    margin-top: 1rem;
+  }
+  
+  .category-badge {
+    background-color: #90EE90; /* Light green for category badges */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 0.5rem;
+  }

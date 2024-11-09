@@ -23,6 +23,10 @@ const LoginPage = () => {
                 headers: {'Content-Type':'application/json'}
             });
             const token = responce.data.auth_token;
+            const responce_id = await axios.get('http://127.0.0.1:8000/api/auth/users/me/',{
+                headers: {'Content-Type':'application/json',Authorization: `Token ${token}`}
+            })
+            localStorage.setItem('userId', responce_id.data.id )
             if (token){
                 console.log('Login succesfull, Token received:', token);
                 localStorage.setItem('token', token);

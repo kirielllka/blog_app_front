@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams,Link } from "react-router-dom";
 import axios from "axios";
-import "../../styles/post_dateil.css"
+import "../styles/post_dateil.css"
 
 const Comment = () => {
     const { id } = useParams();
@@ -65,7 +65,7 @@ const Comment = () => {
           {comments.map((comment) => (
             <li key={comment.id} className="comment-card">
               <div className="comment-title">Контент: {comment.content}</div>
-              <div className="comment-author">Автор: {comment.user_info.username}</div>
+              <div className="comment-author">Автор: <Link to={`../profile/${comment.user_info.id}`}>{comment.user_info.username}</Link></div>
               <div className="comment-dates">
                 Создано: {new Date(comment.date_of_create).toLocaleDateString()}
                 <br />
